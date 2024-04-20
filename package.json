@@ -5,6 +5,9 @@
   "author": "Jadson",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "start": "ts-node-dev ./src/index.ts"
+  },
   "dependencies": {
     "express": "^4.19.2"
   },
