@@ -1,5 +1,7 @@
 import { Router } from "express";
 
+import { CitiesController } from "../../controllers";
+
 const router = Router();
 
 router.get('/', (_, res) => {
@@ -7,9 +9,6 @@ router.get('/', (_, res) => {
     return res.send('hello world');
 });
 
-router.post('/post', (req, res) => {
-    console.log(req.body);
-    return res.json(req.body);
-});
+router.post('/cities', CitiesController.create);
 
 export { router };
