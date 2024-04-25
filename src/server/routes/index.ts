@@ -11,5 +11,13 @@ router.get('/', (_, res) => {
 
 router.post('/cities', CitiesController.createValidation, CitiesController.create);
 
+router.get('/cities/:id', CitiesController.getByIdValidation, CitiesController.getById);
+
 router.get('/cities', CitiesController.getValidation, CitiesController.getAll);
+
+router.delete('/cities/:id', CitiesController.deleteByIdValidation, CitiesController.deleteById);
+
+router.put('/cities/:id', CitiesController.updateByIdValidation, CitiesController.updateById);
+
+
 export { router };
