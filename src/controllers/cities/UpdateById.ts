@@ -24,6 +24,6 @@ export const updateByIdValidation = validation((getSchema) => ({
 export const updateById = async (req: Request<IParamsProps, {}, IBodyProps>, res: Response) => {
 
     console.log(req.body);
-    return res.status(StatusCodes.ACCEPTED).send('Successfully in update city!');
+    return res.status(StatusCodes.ACCEPTED).json(123);
 
 }
